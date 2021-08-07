@@ -17,7 +17,6 @@ ao, bo = ea%df, eb%df # offset to start at to include everest
 z = P.array(z[ao::df, bo::df])
 lon = P.array(lon[ao::df])
 lat = P.array(lat[bo::df])
-# lon[lon<0], lon[lon>=0] = lon[lon<0]+180, lon[lon>=0]-180
 A = lon<0
 B = lon>=0
 l2 = P.hstack([lon[B]-180, lon[A]+180])
